@@ -1,0 +1,279 @@
+.app-notas {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.app-notas h1 {
+  margin-bottom: 20px;
+}
+
+.buscador input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.tabs-filtro {
+  display: flex;
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.tabs-filtro button {
+  padding: 10px 20px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.tabs-filtro button.active {
+  background: #007bff;
+  color: white;
+}
+
+.contenido {
+  display: flex;
+  gap: 20px;
+}
+
+.lista-panel {
+  width: 300px;
+  flex-shrink: 0;
+}
+
+.editor-panel {
+  flex: 1;
+  min-height: 500px;
+}
+
+.lista-notas {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nota-item {
+  padding: 15px;
+  border: 1px solid #eee;
+  border-left: 4px solid #007bff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.nota-item:hover {
+  background: #f9f9f9;
+}
+
+.nota-item.activa {
+  background: #e3f2fd;
+  border-color: #007bff;
+}
+
+.nota-item h4 {
+  margin: 0 0 5px 0;
+}
+
+.nota-item .preview {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.nota-item .tiempo {
+  font-size: 12px;
+  color: #999;
+}
+
+.nota-item .acciones {
+  display: flex;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.nota-item .acciones button {
+  padding: 5px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  opacity: 0.6;
+}
+
+.nota-item .acciones button:hover {
+  opacity: 1;
+}
+
+.btn-nueva {
+  width: 100%;
+  padding: 15px;
+  margin-top: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.lista-vacia {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}
+
+.editor-nota {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.editor-titulo {
+  font-size: 24px;
+  border: none;
+  width: 70%;
+  font-weight: bold;
+}
+
+.color-picker {
+  display: flex;
+  gap: 5px;
+}
+
+.color-btn {
+  width: 25px;
+  height: 25px;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.color-btn.active {
+  border-color: #333;
+}
+
+.editor-tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.editor-tabs button {
+  padding: 8px 16px;
+  border: none;
+  background: #f0f0f0;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editor-tabs button.active {
+  background: #007bff;
+  color: white;
+}
+
+.editor-contenido textarea {
+  width: 100%;
+  min-height: 300px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-family: monospace;
+  resize: vertical;
+}
+
+.preview-markdown {
+  padding: 15px;
+  min-height: 300px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.preview-markdown h1, .preview-markdown h2, .preview-markdown h3 {
+  margin-top: 0;
+}
+
+.preview-markdown code {
+  background: #f5f5f5;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.preview-markdown pre {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.editor-footer {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.btn-guardar {
+  padding: 10px 20px;
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-cancelar {
+  padding: 10px 20px;
+  background: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.vista-nota {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.vista-nota h2 {
+  margin-top: 0;
+}
+
+.vista-nota .contenido {
+  display: block;
+}
+
+.vista-nota .tiempo {
+  color: #999;
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.sin-seleccionar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  color: #999;
+}
+
+.vacio {
+  color: #ccc;
+  font-style: italic;
+}

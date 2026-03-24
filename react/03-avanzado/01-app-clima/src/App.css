@@ -1,0 +1,226 @@
+.app-clima {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  text-align: center;
+}
+
+.buscador {
+  position: relative;
+  margin-bottom: 15px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.buscador input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+}
+
+.buscador .icono {
+  padding: 0 15px;
+}
+
+.resultados {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 5px;
+  z-index: 10;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.resultado-item {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  border: none;
+  background: white;
+  text-align: left;
+  cursor: pointer;
+}
+
+.resultado-item:hover {
+  background: #f5f5f5;
+}
+
+.selector-unidades {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  margin-bottom: 20px;
+}
+
+.selector-unidades button {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  background: white;
+  cursor: pointer;
+}
+
+.selector-unidades button.active {
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.clima-actual {
+  text-align: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 16px;
+  margin-bottom: 20px;
+}
+
+.ciudad-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.fav-btn {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.temp-principal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.icono-grande {
+  font-size: 60px;
+}
+
+.temp {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.descripcion {
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  opacity: 0.9;
+}
+
+.detalles {
+  display: flex;
+  justify-content: space-around;
+}
+
+.detalle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.detalle span:first-child {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+.detalle span:last-child {
+  font-weight: bold;
+}
+
+.pronostico {
+  background: #f5f5f5;
+  padding: 15px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.pronostico h3 {
+  margin: 0 0 15px 0;
+}
+
+.dias {
+  display: flex;
+  justify-content: space-between;
+}
+
+.dia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+
+.dia .fecha {
+  font-size: 12px;
+  color: #666;
+}
+
+.dia .icono {
+  font-size: 24px;
+}
+
+.dia .temps {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.ciudades-guardadas {
+  margin-top: 20px;
+}
+
+.ciudades-guardadas h3 {
+  margin: 0 0 10px 0;
+  font-size: 14px;
+  color: #666;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  padding: 8px 16px;
+  background: #e0e0e0;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.chip:hover {
+  background: #d0d0d0;
+}
+
+.loading {
+  text-align: center;
+  padding: 20px;
+}
+
+.error {
+  text-align: center;
+  padding: 20px;
+  color: red;
+  background: #ffe0e0;
+  border-radius: 8px;
+}

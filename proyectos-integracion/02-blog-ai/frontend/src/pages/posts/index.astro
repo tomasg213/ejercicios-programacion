@@ -1,0 +1,26 @@
+import Layout from '../layouts/Layout.astro'
+import PostCard from '../components/PostCard'
+
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000'
+
+let posts = []
+try {
+  const res = await fetch(`${API_URL}/posts`)
+  posts = await res.json()
+} catch (e) {
+  console.error(e)
+}
+---
+
+<Layout>
+  <main class="max-w-4xl mx-auto px-4 py-12">
+    <h1 class="text-3xl font-bold mb-8">Latest Posts</h1>
+    <div class="grid gap-6">
+      {posts.length > 0 ? (
+        posts.map((post: any) => <PostCard client:visible post={post} />)
+      ) : (
+        <p class="text-gray-500">No posts yet. Be the first to write one!</p>
+      )}
+    </div>
+  </main>
+</Layout>

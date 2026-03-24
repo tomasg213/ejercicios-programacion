@@ -1,0 +1,186 @@
+.app {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.filtros {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.filtros input,
+.filtros select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.filtros input {
+  flex: 1;
+}
+
+.tarea-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: white;
+}
+
+.tarea-item.completada {
+  opacity: 0.6;
+}
+
+.tarea-item.completada h3 {
+  text-decoration: line-through;
+}
+
+.tarea-contenido {
+  flex: 1;
+}
+
+.tarea-contenido h3 {
+  margin: 0 0 5px 0;
+}
+
+.tarea-contenido p {
+  margin: 0;
+  color: #666;
+}
+
+.tarea-meta {
+  display: flex;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.prioridad {
+  padding: 2px 8px;
+  border-radius: 4px;
+  color: white;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.fecha {
+  font-size: 12px;
+  color: #666;
+}
+
+.tarea-acciones {
+  display: flex;
+  gap: 5px;
+}
+
+.tarea-acciones button {
+  padding: 5px 10px;
+  border: none;
+  background: #f0f0f0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-nueva {
+  width: 100%;
+  padding: 15px;
+  margin-top: 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.estadisticas {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f5f5f5;
+  border-radius: 8px;
+}
+
+.barra-progreso {
+  height: 8px;
+  background: #ddd;
+  border-radius: 4px;
+  margin-top: 10px;
+  overflow: hidden;
+}
+
+.progreso {
+  height: 100%;
+  background: #27ae60;
+  transition: width 0.3s;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-contenido {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 400px;
+}
+
+.modal-contenido form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modal-contenido input,
+.modal-contenido textarea,
+.modal-contenido select {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-contenido textarea {
+  min-height: 80px;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.botones button {
+  flex: 1;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.botones button[type="submit"] {
+  background: #007bff;
+  color: white;
+}
+
+.botones button[type="button"] {
+  background: #6c757d;
+  color: white;
+}
+
+.lista-vacia {
+  text-align: center;
+  padding: 40px;
+  color: #666;
+}

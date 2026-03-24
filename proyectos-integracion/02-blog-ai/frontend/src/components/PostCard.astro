@@ -1,0 +1,27 @@
+interface Props {
+  post: {
+    _id: string
+    title: string
+    slug: string
+    excerpt?: string
+    coverImage?: string
+    author: { name: string }
+    readingTime: number
+    createdAt: string
+  }
+}
+
+const { post } = Astro.props
+---
+
+<article class="bg-white p-6 rounded-lg shadow hover:shadow-md transition">
+  {post.coverImage && <img src={post.coverImage} alt={post.title} class="w-full h-48 object-cover rounded mb-4" />}
+  <h2 class="text-xl font-bold mb-2">
+    <a href={`/posts/${post.slug}`} class="hover:text-blue-600">{post.title}</a>
+  </h2>
+  {post.excerpt && <p class="text-gray-600 mb-4">{post.excerpt}</p>}
+  <div class="flex justify-between text-sm text-gray-500">
+    <span>By {post.author?.name}</span>
+    <span>{post.readingTime} min read</span>
+  </div>
+</article>

@@ -1,0 +1,20 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mi-app
+  labels:
+    app: mi-app
+    entorno: desarrollo
+spec:
+  containers:
+  - name: app
+    image: nginx:alpine
+    ports:
+    - containerPort: 80
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "250m"
+      requests:
+        memory: "64Mi"
+        cpu: "100m"

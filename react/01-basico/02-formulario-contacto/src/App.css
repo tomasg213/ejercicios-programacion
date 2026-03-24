@@ -1,0 +1,81 @@
+.app {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.formulario-contacto {
+  background: #f5f5f5;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.campo-formulario {
+  margin-bottom: 15px;
+}
+
+.campo-formulario label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.campo-formulario input,
+.campo-formulario textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campo-formulario.error input,
+.campo-formulario.error textarea {
+  border-color: red;
+}
+
+.mensaje-error {
+  color: red;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+.mensaje-exito {
+  color: green;
+  padding: 10px;
+  background: #e8f5e9;
+  border-radius: 4px;
+  margin-top: 10px;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.botones button {
+  flex: 1;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.botones button[type="submit"] {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.botones button[type="button"] {
+  background: #6c757d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+}
+
+.botones button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}

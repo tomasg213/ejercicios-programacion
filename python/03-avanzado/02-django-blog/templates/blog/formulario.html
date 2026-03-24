@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}{% if object %}Editar{% else %}Crear{% endif %} Post{% endblock %}
+
+{% block content %}
+<h1>{% if object %}Editar{% else %}Nuevo{% endif %} Post</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Guardar</button>
+</form>
+
+<div style="margin-top: 1rem;">
+    <a href="{% url 'inicio' %}">&larr; Cancelar</a>
+</div>
+{% endblock %}

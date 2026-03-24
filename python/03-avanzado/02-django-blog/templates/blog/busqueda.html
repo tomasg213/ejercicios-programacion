@@ -1,0 +1,23 @@
+{% extends 'blog/base.html' %}
+
+{% block title %}Busqueda{% endblock %}
+
+{% block content %}
+<h1>Resultados de Busqueda</h1>
+
+<p>Buscando: "{{ query }}"</p>
+
+<div class="posts">
+    {% for post in posts %}
+    <div class="post-card">
+        <h2><a href="{% url 'detalle_post' post.slug %}">{{ post.titulo }}</a></h2>
+        <p class="post-meta">
+            Por {{ post.autor.username }} | {{ post.fecha_publicacion|date:"d M Y" }}
+        </p>
+        <p class="post-contenido">{{ post.contenido|truncatewords:30 }}</p>
+    </div>
+    {% empty %}
+    <p>No se encontraron resultados para "{{ query }}".</p>
+    {% endfor %}
+</div>
+{% endblock %}

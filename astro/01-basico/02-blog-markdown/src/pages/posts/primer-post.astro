@@ -1,0 +1,58 @@
+---
+import PostLayout from '../layouts/PostLayout.astro';
+
+const title = "Mi Primer Post en Astro";
+const pubDate = new Date();
+const description = "Una introducción a Astro y por qué es genial para blogs.";
+const author = "Desarrollador";
+const tags = ["Astro", "Web", "Tutorial"];
+
+// En un blog real, esto vendría de Content Collections
+const posts = [
+  {
+    title: "Mi Primer Post en Astro",
+    pubDate: new Date(),
+    description: "Una introducción a Astro",
+    slug: "primer-post"
+  },
+  {
+    title: "Componentes en Astro",
+    pubDate: new Date(Date.now() - 86400000),
+    description: "Cómo crear componentes reutilizables",
+    slug: "componentes-astro"
+  }
+];
+---
+
+<PostLayout title={title} pubDate={pubDate} description={description} author={author} tags={tags}>
+  <p>
+    Este es mi primer post usando Astro. Astro es un framework web moderno
+    que prioriza el rendimiento usando una arquitectura islands.
+  </p>
+  
+  <h2>¿Por qué Astro?</h2>
+  
+  <p>
+    Astro ofrece múltiples ventajas sobre otros frameworks:
+  </p>
+  
+  <ul>
+    <li><strong>Zero JavaScript por defecto</strong> - Solo se envía JS cuando es necesario</li>
+    <li><strong>Content Collections</strong> - Organiza tu contenido con type safety</li>
+    <li><strong>Componentes Island</strong> - Hidrata solo los componentes que necesitan interactividad</li>
+    <li><strong>Soporte multi-framework</strong> - Usa React, Vue, Svelte en el mismo proyecto</li>
+  </ul>
+  
+  <h2>Ejemplo de código</h2>
+  
+  <pre><code>{`---
+// src/pages/index.astro
+const mensaje = "¡Hola desde Astro!";
+---
+
+<h1>{mensaje}</h1>`}</code></pre>
+  
+  <p>
+    ¡Eso es todo por hoy! En el próximo post cubriremos más características de Astro.
+  </p>
+</PostLayout>

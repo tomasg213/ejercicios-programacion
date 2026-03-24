@@ -1,0 +1,138 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre Mí - Mi Portfolio">
+  <section class="hero">
+    <div class="container">
+      <h1>Hola, soy <span class="highlight">Desarrollador Web</span></h1>
+      <p class="subtitle">Creo experiencias digitales increíbles</p>
+    </div>
+  </section>
+
+  <section id="sobre-mi" class="section">
+    <div class="container">
+      <h2>Sobre Mí</h2>
+      <div class="content">
+        <p>
+          Soy un desarrollador full-stack apasionado por crear interfaces de usuario
+          intuitivas y aplicaciones web modernas. Con experiencia en React, Node.js,
+          y bases de datos, me especializo en construir productos digitales que
+          resuelven problemas reales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="section">
+    <div class="container">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul>
+            <li>React / Next.js</li>
+            <li>TypeScript</li>
+            <li>Tailwind CSS</li>
+            <li>Astro</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul>
+            <li>Node.js / Express</li>
+            <li>Python / FastAPI</li>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>DevOps</h3>
+          <ul>
+            <li>Docker</li>
+            <li>GitHub Actions</li>
+            <li>AWS</li>
+            <li>Linux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  .hero {
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+  }
+  
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .highlight {
+    color: var(--color-primary);
+  }
+  
+  .subtitle {
+    font-size: 1.25rem;
+    color: var(--color-text-light);
+  }
+  
+  .section {
+    padding: 4rem 2rem;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .skill-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .skill-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+  }
+  
+  .skill-card ul {
+    list-style: none;
+  }
+  
+  .skill-card li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  .skill-card li:last-child {
+    border-bottom: none;
+  }
+</style>
